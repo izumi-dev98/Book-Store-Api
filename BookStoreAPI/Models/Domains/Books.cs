@@ -1,4 +1,6 @@
-﻿namespace BookStoreAPI.Models.Domains
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BookStoreAPI.Models.Domains
 {
     public class Books
     {
@@ -14,7 +16,7 @@
 
         public int AuthorId { get; set; }
 
-
+        [ForeignKey("AuthorId")]
         public Authors Authors { get; set; }
     }
 }

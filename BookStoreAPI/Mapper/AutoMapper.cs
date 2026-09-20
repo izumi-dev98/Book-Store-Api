@@ -9,6 +9,10 @@ namespace BookStoreAPI.Mapper
         public AutoMapper()
         {
             CreateMap<Authors, AuthorsDTO>().ReverseMap();
+
+            CreateMap<Authors, CreateAuthorDTO>().ReverseMap();
+
+            CreateMap<Authors, UpdateAuthorDTO>().ReverseMap();
         }
     }
 }
